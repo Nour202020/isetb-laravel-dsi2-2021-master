@@ -47,17 +47,12 @@
                         <form action="{{ url('/store') }}" method="get">
                             @csrf 
                             <div class="form-group">
-                                <label>CNE</label>
-                                <input name="cne" type="text" class="form-control"  placeholder="Enter cne">
+                                <label>CIN</label>
+                                <input name="cin" type="text" class="form-control"  placeholder="Enter cin">
                             </div> 
                             <div class="form-group">
-                                <label>First Name</label>
-                                <input name="firstName" type="text" class="form-control"  placeholder="Enter the first name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>second Name</label>
-                                <input name="secondName" type="text" class="form-control"  placeholder="Enter second name">
+                                <label>Name</label>
+                                <input name="name" type="text" class="form-control"  placeholder="Enter the name">
                             </div>
                             
                             <div class="form-group">
@@ -65,8 +60,8 @@
                                 <input name="age" type="text" class="form-control"  placeholder="Enter the Age">
                             </div>
                             <div class="form-group">
-                                <label>Speciality</label>
-                                <input name="speciality" type="text" class="form-control"  placeholder="Enter Sepeciality">
+                                <label>Department</label>
+                                <input name="department" type="text" class="form-control"  placeholder="Enter the Department">
                             </div> 
                             <input type="submit" class="btn btn-info" value="Save">
                             <input type="reset" class="btn btn-warning" value="Reset">
@@ -101,24 +96,20 @@
                         <form action="{{ url('/update/'.$student->id) }}" method="get">
                             @csrf
                             <div class="form-group">
-                                <label>CNE</label>
-                                <input value="{{ $student->cne }}" name="cne" type="text" class="form-control"  placeholder="Enter cne">
+                                <label>CIN</label>
+                                <input value="{{ $student->cin }}" name="cin" type="text" class="form-control"  placeholder="Enter cin">
                             </div>
                             <div class="form-group">
-                                <label>First Name</label>
-                                <input value="{{ $student->firstName }}" name="firstName" type="text" class="form-control"  placeholder="Enter the first name">
-                            </div>
-                            <div class="form-group">
-                                <label>second Name</label>
-                                <input value="{{ $student->secondName }}" name="secondName" type="text" class="form-control"  placeholder="Enter second name">
+                                <label>Name</label>
+                                <input value="{{ $student->name }}" name="name" type="text" class="form-control"  placeholder="Enter the name">
                             </div>
                             <div class="form-group">
                                 <label>Age</label>
                                 <input value="{{ $student->age }}" name="age" type="text" class="form-control"  placeholder="Enter the Age">
                             </div>
                             <div class="form-group">
-                                <label>Speciality</label>
-                                <input value="{{ $student->speciality }}" name="speciality" type="text" class="form-control"  placeholder="Enter Sepeciality">
+                                <label>Department</label>
+                                <input value="{{ $student->department }}" name="department" type="text" class="form-control"  placeholder="Enter the Department">
                             </div>
                             <input type="submit" class="btn btn-info" value="Update">
                             <input type="reset" class="btn btn-warning" value="Reset">

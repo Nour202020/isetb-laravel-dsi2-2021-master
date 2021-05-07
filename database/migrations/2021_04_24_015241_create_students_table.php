@@ -15,12 +15,13 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('cne');
-            $table->string('firstName');
-            $table->string('secondName');
+            $table->string('cin');
+            $table->string('name');
             $table->integer('age');
-            $table->string('speciality');
+            $table->string('department');
             $table->timestamps();
+            $table->integer('department_id')->unsigned();
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

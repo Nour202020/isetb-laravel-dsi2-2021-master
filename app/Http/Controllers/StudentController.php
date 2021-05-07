@@ -39,13 +39,12 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $student = new Student() ;
-        $student->cne = $request->input('cne') ;
-        $student->firstName = $request->input('firstName') ;
-        $student->secondName = $request->input('secondName') ;
+        $student->cin = $request->input('cin') ;
+        $student->name = $request->input('name') ;
         $student->age = $request->input('age') ;
-        $student->speciality = $request->input('speciality') ;
+        $student->department = $request->input('department') ;
         $student->save() ;
-        return redirect('/') ;
+      return redirect('/') ;
     }
 
     /**
@@ -86,11 +85,10 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
       $student = Student::find($id);
-      $student->cne = $request->input('cne') ;
-      $student->firstName = $request->input('firstName') ;
-      $student->secondName = $request->input('secondName') ;
+      $student->cin = $request->input('cin') ;
+      $student->name = $request->input('name') ;
       $student->age = $request->input('age') ;
-      $student->speciality = $request->input('speciality') ;
+      $student->department = $request->input('department') ;
       $student->save() ;
       return redirect('/') ;
     }

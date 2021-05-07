@@ -19,6 +19,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 */
 Route::get('/', "StudentController@index");
 Route::get('/edit/{id}', "StudentController@edit");
+Route::get('/destroy/{id}', "StudentController@destroy");
 Route::get('/show/{id}', "StudentController@show");
 Route::get('/create', "StudentController@create");
 Route::get('/store', "StudentController@store");
