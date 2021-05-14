@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Department;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,5 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function welcome() {
+        $departments = Department::get('title');
+        return view('welcome', [
+            'Department' => $departments
+        ]);
     }
 }

@@ -61,6 +61,8 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+
         </style> --}}
     </head>
     <body>
@@ -79,17 +81,20 @@
                 </div>
             @endif
 
+            
+
             <div class="content">
                 <div class="title m-b-md">
                     DSI2 - ISET Bizerte
                 </div>
 
                 <ul>
-                    @foreach ($contacts as $contact)
-                        <li>{{ $contact['name'] }} ({{ $contact['phone'] }}) {{ $contact['address'] }}</li>
+                    @foreach ($departments as $department)
+                        <li>{{ $department['title'] }} ({{ $contact['name'] }}) {{ $contact['id'] }}</li>
                     @endforeach
                 </ul>
             </div>
         </div>
+        
     </body>
 </html>
