@@ -9,14 +9,14 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-
+*/
 
 Route::get('/', 'HomeController@welcome');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-*/
+
 Route::get('/', "StudentController@index");
 Route::get('/edit/{id}', "StudentController@edit");
 Route::get('/destroy/{id}', "StudentController@destroy");

@@ -45,7 +45,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $user = User::find($id);
+            $user->cne = $request->input('cin') ;
+            $user->firstName = $request->input('firstName') ;
+            $user->secondName = $request->input('secondName') ;
+            $user->email = $request->input('email') ;
+            $user->save() ;
+          return redirect('/') ;
+          
     }
 
     /**
@@ -79,13 +86,13 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-    //     $user = User::find($id);
-    //     $user->cne = $request->input('cin') ;
-    //     $user->firstName = $request->input('firstName') ;
-    //     $user->secondName = $request->input('secondName') ;
-    //     $user->email = $request->input('email') ;
-    //     $user->save() ;
-    //   return redirect('/') ;
+        $user = User::find($id);
+        $user->cin = $request->input('cin') ;
+        $user->name = $request->input('name') ;
+        $user->secondName = $request->input('secondName') ;
+        $user->email = $request->input('email') ;
+        $user->save() ;
+      return redirect('/') ;
     }
 
     /**

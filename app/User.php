@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    public function department() {
-        return $this->belongsTo('app\department');
+    public function roles() {
+        return $this->hasOne('App\Role');
     }
 }

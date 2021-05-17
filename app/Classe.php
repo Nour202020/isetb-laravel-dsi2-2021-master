@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Department extends Model
+class Classe extends Model
 {
     public function students() {
-        return $this->hasMany('App\Student');
+        return $this->belongsTo('App\Student');
     }
-
     public function teachers() {
         return $this->hasMany('App\Teacher');
     }
+
 }

@@ -18,10 +18,9 @@ class CreateStudentsTable extends Migration
             $table->string('cin');
             $table->string('name');
             $table->integer('age');
-            $table->string('department');
+            $table->bigInteger('classe_id')->unsigned();
             $table->timestamps();
-            $table->integer('department_id')->unsigned();
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('classe_id')->references('id')->on('classes')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

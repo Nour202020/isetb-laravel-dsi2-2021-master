@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Student extends Model
+class Role extends Model
 {
-    public function classes() {
+    public function users() {
         return $this->hasOne('App\Classe');
     }
 }
