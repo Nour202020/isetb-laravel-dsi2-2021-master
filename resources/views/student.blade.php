@@ -123,13 +123,17 @@
                                 <input name="age" type="text" class="form-control"  placeholder="Enter the Age">
                             </div>
                             <div class="form-group">
-                                <label>Department</label>
-                                <input name="department" type="text" class="form-control"  placeholder="Enter the Department">
+                                <label>User_id</label>
+                                <input name="user_id" type="text" class="form-control"  placeholder="Enter the User_id">
+                            </div> 
+                            <div class="form-group">
+                                <label>Classe_id</label>
+                                <input name="classe_id" type="text" class="form-control"  placeholder="Enter the Classe_id">
                             </div> 
                             <input type="submit" class="btn btn-info" value="Save">
                             <input type="reset" class="btn btn-warning" value="Reset">
 
-                        </form>
+                        </form>php
                     </div>
                 </div>
 

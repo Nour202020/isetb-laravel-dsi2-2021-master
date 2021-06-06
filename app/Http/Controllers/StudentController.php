@@ -42,7 +42,8 @@ class StudentController extends Controller
         $student->cin = $request->input('cin') ;
         $student->name = $request->input('name') ;
         $student->age = $request->input('age') ;
-        $student->department = $request->input('department') ;
+        $student->user_id = $request->input('user_id') ;
+        $student->classe_id = $request->input('classe_id') ;
         $student->save() ;
       return redirect('/') ;
     }
@@ -88,7 +89,8 @@ class StudentController extends Controller
       $student->cin = $request->input('cin') ;
       $student->name = $request->input('name') ;
       $student->age = $request->input('age') ;
-      $student->department = $request->input('department') ;
+      $student->user_id = $request->input('user_id') ;
+      $student->classe_id = $request->input('classe_id') ;
       $student->save() ;
       return redirect('/') ;
     }

@@ -11,12 +11,11 @@
 |
 */
 
-Route::get('/', 'HomeController@welcome');
+
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/', "StudentController@index");
 Route::get('/edit/{id}', "StudentController@edit");
 Route::get('/destroy/{id}', "StudentController@destroy");
@@ -24,6 +23,3 @@ Route::get('/show/{id}', "StudentController@show");
 Route::get('/create', "StudentController@create");
 Route::get('/store', "StudentController@store");
 Route::get('/update/{id}', "StudentController@update");
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
